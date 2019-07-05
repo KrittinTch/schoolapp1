@@ -5,13 +5,15 @@ import { Routes, RouterModule } from "@angular/router";
 import { RegisterComponent } from "./pages/register/register.component";
 import { ForgotComponent } from "./pages/forgot/forgot.component";
 import { AuthGuardService } from "ng6-md-auth";
+import { StudentListComponent } from "./student-list/student-list.component";
 
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "home",
+    redirectTo: "student-list",
     pathMatch: "full"
   },
+  { path: "student-list", component: StudentListComponent},
   { path: "home", component: HomeComponent, canActivate: [AuthGuardService] },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },

@@ -1,0 +1,52 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button>
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>เเจ้งเตือนการสแกนเอกสาร</ng-template>
+        
+          <p>ตรวจสอบให้แน่ใจว่าคุณได้ทำการสเเกนเอกสารครบถ้วนเเล้ว</p>
+        
+        <div>
+           
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>เลือกไฟล์สูติบัตร</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious >Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+        <mat-step [stepControl]="thirdFormGroup">
+            <form [formGroup]="thirdFormGroup">
+              <ng-template matStepLabel>ตรวจสอบข้อมูลจากการสเเกน</ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Address" formControlName="secondCtrl" required>
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>ย้อนกลับ</button>
+                <button mat-button matStepperNext>ถัดไป</button>
+              </div>
+            </form>
+          </mat-step>
+          
+         
+              
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>ย้อนกลับ</button>
+        <button mat-button (click)="onNoClick()">บันทึก</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>

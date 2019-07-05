@@ -1,3 +1,27 @@
-<p>
-  student-list works!
-</p>
+<h1>รายชื่อนักเรียน</h1>
+
+<div class="row" *ngIf="students.length === 0">
+
+<div><button (click)="openDialog()">เพิ่ม</button></div>
+
+</div>
+
+
+<div class="row" *ngIf="students.length > 0">
+  <div class="col-12">
+    
+
+    <div><button (click)="openDialog()">เพิ่ม</button></div>
+
+    <div class="row mt-5">
+      <div class="col-6">ชื่อ - สกุล</div>
+      <div class="col-6">เบอร์โทรติดต่อ</div>
+    </div>
+
+    <div class="row mt-2" *ngFor="let students of students">
+      <div class="col-6">{{students.fullname}}</div>
+      <div class="col-6">{{students.telno}}</div>
+    </div>
+
+  </div>
+</div>
