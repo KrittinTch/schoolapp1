@@ -14,13 +14,15 @@
     <div><button (click)="openDialog()">เพิ่ม</button></div>
 
     <div class="row mt-5">
-      <div class="col-6">ชื่อ - สกุล</div>
-      <div class="col-6">เบอร์โทรติดต่อ</div>
+      <div class="col-4">ชื่อ - สกุล</div>
+      <div class="col-4">เลขประจำตัวประชาชน</div>
+      <div class="col-4">เบอร์โทรติดต่อ</div>
     </div>
 
     <div class="row mt-2" *ngFor="let students of students">
-      <div class="col-6">{{students.fullname}}</div>
-      <div class="col-6">{{students.telno}}</div>
+      <div class="col-4">{{students.fullname}}</div>
+      <div class="col-4">{{students.id}}</div>
+      <div class="col-4">{{students.telno}}</div>
     </div>
 
   </div>

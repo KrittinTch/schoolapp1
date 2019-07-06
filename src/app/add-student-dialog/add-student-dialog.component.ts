@@ -6,11 +6,13 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   selector: 'app-add-student-dialog',
   templateUrl: './add-student-dialog.component.html',
   styleUrls: ['./add-student-dialog.component.scss']
+  
 })
 export class AddStudentDialogComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  
 
   constructor(public dialogRef: MatDialogRef<AddStudentDialogComponent>,private _formBuilder: FormBuilder) { }
 

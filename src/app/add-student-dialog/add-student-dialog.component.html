@@ -1,52 +1,147 @@
-<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-  </button>
-  <mat-horizontal-stepper [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>เเจ้งเตือนการสแกนเอกสาร</ng-template>
-        
-          <p>ตรวจสอบให้แน่ใจว่าคุณได้ทำการสเเกนเอกสารครบถ้วนเเล้ว</p>
-        
-        <div>
-           
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>เลือกไฟล์สูติบัตร</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Address" formControlName="secondCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious >Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step>
-        <mat-step [stepControl]="thirdFormGroup">
-            <form [formGroup]="thirdFormGroup">
-              <ng-template matStepLabel>ตรวจสอบข้อมูลจากการสเเกน</ng-template>
-              <mat-form-field>
-                <input matInput placeholder="Address" formControlName="secondCtrl" required>
-              </mat-form-field>
-              <div>
-                <button mat-button matStepperPrevious>ย้อนกลับ</button>
-                <button mat-button matStepperNext>ถัดไป</button>
-              </div>
-            </form>
-          </mat-step>
-          
-         
-              
-      <ng-template matStepLabel>Done</ng-template>
-      You are now done.
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button> -->
+
+
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>เเจ้งเตือน</ng-template>
+      <h5>
+        โปรดตรวจสอบให้แน่ใจว่าคุณได้ทำการสเเกนเอกสารไว้เรียบร้อยเเล้ว <br> หากใช่ ให้กดปุ่ม "ถัดไป"
+        เพื่อไปหน้าการอัพโหลดข้อมูล
+      </h5>
+      <div>
+
+        <button mat-button matStepperNext>ถัดไป</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>อัพโหลด</ng-template>
+      <div class="container">
+        <button class="uploadbtn" mat-flat-button color="primary" (click)="fileInput.click()">อัพโหลดไฟล์</button>
+        <input hidden type="file" #fileInput>
+      </div>
       <div>
         <button mat-button matStepperPrevious>ย้อนกลับ</button>
+        <button mat-button matStepperNext>ถัดไป</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>ผลการสแกน</ng-template>
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="เลขบตรประจำตัวประชาชน" value="1104200754859">
+        </mat-form-field>
+      </form>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="ชื่อ - นามสกุล" value="ธีระ ทับฤทธิ์">
+        </mat-form-field>
+      </form>
+      
+      <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="เพศ" value="ชาย">
+          </mat-form-field>
+        </form>
+        
+      
+      <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="วันเกิด" value="17 สิงหาคม 2553">
+          </mat-form-field>
+        </form>
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="ชื่อสกุลบิดา" value="ธีรศักดิ์ ทับฤทธิ์">
+            </mat-form-field>
+          </form>
+          <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="ชื่อสกุลมารดา" value="กันทิมา โสภกุล">
+              </mat-form-field>
+            </form>
+      <div>
+        <button mat-button matStepperPrevious>ย้อนกลับ</button>
+        <button mat-button matStepperNext>ถัดไป</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>อัพโหลดไฟล์ที่เหลือ</ng-template>
+      <img class="img" src="https://image.flaticon.com/icons/svg/138/138590.svg">
+      <div class="container">
+          <button class="uploadbtn" mat-flat-button color="primary" (click)="fileInput.click()">อัพโหลดไฟล์</button>
+          <input hidden type="file" #fileInput>
+        </div>
+        <div class="center">
+          โปรดอัพโหลดไฟล์ที่เหลือให้ครบถ้วนตามรายการ ดังนี้ <br>
+          - สำเนาบัตรประจำตัวประชาชน<br>
+          - สำเนาทะเบียนบ้าน<br>
+          - ใบสมัคร<br>
+          - ผลงานต่างๆ<br>
+          - อื่นๆ
+        </div>
+      <div>
+        <button mat-button matStepperPrevious>ย้อนกลับ</button>
+        <button mat-button matStepperNext>ถัดไป</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>ตรวจสอบ</ng-template>
+      <form class="example-form">
+          <mat-form-field class="center1">
+            <input matInput placeholder="เลขบตรประจำตัวประชาชน" value="1104200754859">
+          </mat-form-field>
+        </form>
+        <form class="example-form">
+          <mat-form-field class="center1">
+            <input matInput placeholder="ชื่อ - นามสกุล" value="ธีระ ทับฤทธิ์">
+          </mat-form-field>
+        </form>
+        
+        <form class="example-form">
+            <mat-form-field class="center1">
+              <input matInput placeholder="เพศ" value="ชาย">
+            </mat-form-field>
+          </form>
+          
+        
+        <form class="example-form">
+            <mat-form-field class="center1">
+              <input matInput placeholder="วันเกิด" value="17 สิงหาคม 2553">
+            </mat-form-field>
+          </form>
+          <form class="example-form">
+              <mat-form-field class="center1">
+                <input matInput placeholder="ชื่อสกุลบิดา" value="ธีรศักดิ์ ทับฤทธิ์">
+              </mat-form-field>
+            </form>
+            <form class="example-form">
+                <mat-form-field class="center1">
+                  <input matInput placeholder="ชื่อสกุลมารดา" value="กันทิมา โสภกุล">
+                </mat-form-field>
+              </form>
+              <div class="center1">
+                  รายการไฟล์ที่อัพโหลด <br>
+                  - สำเนาบัตรประจำตัวประชาชน<br>
+                  - สำเนาทะเบียนบ้าน<br>
+                  - ใบสมัคร<br>
+                </div>
+      <div>
+        <button mat-button matStepperPrevious>กลับ</button>
         <button mat-button (click)="onNoClick()">บันทึก</button>
       </div>
-    </mat-step>
-  </mat-horizontal-stepper>
+    </form>
+  </mat-step>
+
+</mat-horizontal-stepper>

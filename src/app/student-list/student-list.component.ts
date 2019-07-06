@@ -23,7 +23,8 @@ export class StudentListComponent implements OnInit {
 
   addStudent(){
     this.students.push({
-      fullname: "ธีรศักดิ์ ทับฤทธิ์",
+      fullname: "ธีระ ทับฤทธิ์",
+      id: "1104200754859",
       telno: "0638265946"
     });
   }
