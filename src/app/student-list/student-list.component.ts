@@ -23,6 +23,7 @@ export class StudentListComponent implements OnInit {
 
   addStudent(){
     this.students.push({
+      no: "1",
       fullname: "ธีระ ทับฤทธิ์",
       id: "1104200754859",
       telno: "0638265946"

@@ -2,16 +2,18 @@
 
 <div class="row" *ngIf="students.length === 0">
 
-<div><button (click)="openDialog()">เพิ่ม</button></div>
-
+  <img src="https://image.flaticon.com/icons/svg/1006/1006013.svg" class="adduserfirst" (click)="openDialog()">
+  
 </div>
+
+
 
 
 <div class="row" *ngIf="students.length > 0">
   <div class="col-12">
     
 
-    <div><button (click)="openDialog()">เพิ่ม</button></div>
+    <div><img src="https://image.flaticon.com/icons/svg/1006/1006013.svg" class="adduser" (click)="openDialog()"></div>
 
     <div class="row mt-5">
       <div class="col-4">ชื่อ - สกุล</div>

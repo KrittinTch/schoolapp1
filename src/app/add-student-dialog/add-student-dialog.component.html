@@ -13,20 +13,21 @@
       </h5>
       <div>
 
-        <button mat-button matStepperNext>ถัดไป</button>
+        <button mat-flat-button color="primary" matStepperNext>ถัดไป</button>
       </div>
     </form>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>อัพโหลด</ng-template>
+      <img class="img" (click)="fileInput.click()" src="https://image.flaticon.com/icons/svg/138/138590.svg">
       <div class="container">
         <button class="uploadbtn" mat-flat-button color="primary" (click)="fileInput.click()">อัพโหลดไฟล์</button>
         <input hidden type="file" #fileInput>
       </div>
       <div>
         <button mat-button matStepperPrevious>ย้อนกลับ</button>
-        <button mat-button matStepperNext>ถัดไป</button>
+        <button mat-flat-button color="primary" matStepperNext>ถัดไป</button>
       </div>
     </form>
   </mat-step>
@@ -69,14 +70,14 @@
             </form>
       <div>
         <button mat-button matStepperPrevious>ย้อนกลับ</button>
-        <button mat-button matStepperNext>ถัดไป</button>
+        <button mat-flat-button color="primary" matStepperNext>ถัดไป</button>
       </div>
     </form>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>อัพโหลดไฟล์ที่เหลือ</ng-template>
-      <img class="img" src="https://image.flaticon.com/icons/svg/138/138590.svg">
+      <img (click)="fileInput.click()" class="img" src="https://image.flaticon.com/icons/svg/138/138590.svg">
       <div class="container">
           <button class="uploadbtn" mat-flat-button color="primary" (click)="fileInput.click()">อัพโหลดไฟล์</button>
           <input hidden type="file" #fileInput>
@@ -91,7 +92,7 @@
         </div>
       <div>
         <button mat-button matStepperPrevious>ย้อนกลับ</button>
-        <button mat-button matStepperNext>ถัดไป</button>
+        <button mat-flat-button color="primary" matStepperNext>ถัดไป</button>
       </div>
     </form>
   </mat-step>
@@ -139,7 +140,7 @@
                 </div>
       <div>
         <button mat-button matStepperPrevious>กลับ</button>
-        <button mat-button (click)="onNoClick()">บันทึก</button>
+        <button mat-flat-button color="primary" (click)="onNoClick()">บันทึก</button>
       </div>
     </form>
   </mat-step>
