@@ -2,13 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { AddStudentDialogComponent } from '../add-student-dialog/add-student-dialog.component';
 
+
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-list.component.html',
   styleUrls: ['./student-list.component.scss']
+  
 })
 export class StudentListComponent implements OnInit {
 
+  
   students = [
     // {
     //   fullname: "ธีระ ทับฤทธิ์",

@@ -7,12 +7,17 @@
 .example-form {
   min-width: 150px;
   max-width: 500px;
-  width: 100%;
+  width: 200px;
 }
 
 .example-full-width {
-  width: 65%;
-  margin-left: 70%;
+  width: 250px;
+  
+}
+
+.photo{
+  height: 450px;
+  width: 350px;
 }
 
 .img{
@@ -31,9 +36,60 @@
     margin-top: 2%;
 }
 
-.center1{
-    margin-left: 25%;
-    margin-top: 2%;
-    width: 88%;
+// .center1{
+//     margin-left: 25%;
+//     margin-top: 2%;
+//     width: 88%;
+// }
+
+.mt{
+  margin-top: 10px;
 }
 
+.btn{
+  margin-left: 531px;
+}
+
+.bt{
+  margin-left: 90%;
+}
+
+.backbtn{
+  margin-bottom: 0%;
+}
+
+.uploadbtn1{
+  margin-left: 40%;
+}
+
+.filename{
+  margin-left: 160px;
+  margin-bottom: 5px;
+}
+
+.example-viewport {
+  height: 400px;
+  width: 700px;
+  border: 1px solid #00000021;
+}
+
+.example-item {
+  height: 50px;
+}
+
+.head{
+  margin-bottom: 3px;
+}
+
+.p5{
+  margin-left: 15%;
+}
+
+.btn1{
+  margin-left: 566px;
+}
+
+.spinner-doc {
+  margin-left: -75%;
+  margin-top: -70%;
+}
