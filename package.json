@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot --prod",
+    "deploy": "node --max-old-space-size=8192 node_modules/@angular/cli/bin/ng build --prod --base-href \"/schoolapp/\" --aot"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +26,7 @@
     "@angular/router": "^6.1.0",
     "@auth0/angular-jwt": "^2.0.0",
     "core-js": "^2.5.4",
+    "express": "^4.17.1",
     "hammerjs": "^2.0.8",
     "ng6-md-auth": "0.0.12",
     "ngx-spinner": "^6.1.2",
