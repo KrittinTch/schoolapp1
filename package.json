@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod",
+    "postinstall": "ng build",
     "deploy": "node --max-old-space-size=8192 node_modules/@angular/cli/bin/ng build --prod --base-href \"/schoolapp/\" --aot"
   },
   "private": true,
