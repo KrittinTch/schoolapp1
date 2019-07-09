@@ -1,8 +1,8 @@
-<h1 class="mt-3 mb-3">รายชื่อนักเรียน</h1>
 
-<div class="row" *ngIf="students.length === 0">
 
-  <img src="https://image.flaticon.com/icons/svg/1006/1006013.svg" class="adduserfirst" (click)="openDialog()">
+<div class="col-6" *ngIf="students.length === 0">
+<div><h3 class="head">เพิ่มรายชื่อผู้สมัคร</h3></div>
+  <img  src="https://image.flaticon.com/icons/svg/1006/1006013.svg" class="adduserfirst" (click)="openDialog()">
 
 </div>
 
@@ -12,7 +12,7 @@
 <div class="row" *ngIf="students.length > 0">
   <div class="col-12">
 
-
+<div><h3 class="head">รายชื่อผู้สมัคร</h3></div>
     <div><img src="https://image.flaticon.com/icons/svg/1006/1006013.svg" class="adduser" (click)="openDialog()"></div>
 
     <div class="row mt-5  border-buttom">

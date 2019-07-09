@@ -68,14 +68,24 @@ export class AddStudentDialogComponent implements OnInit {
      console.log(files.length);
      if(files){
        this.fileSelected = files[0].name;
-      Array.from(files).forEach((file:any) => {
-        console.log(file.name);
-        this.filesMulti.push(file);
-      });
+     
 
      }
     
   }
+
+  detectFiles2(ev) {
+    var files: Array<any> =  ev.target.files;
+   console.log(files.length);
+   if(files){
+    Array.from(files).forEach((file:any) => {
+      console.log(file.name);
+      this.filesMulti.push(file);
+    });
+
+   }
+  
+}
 
 
 
