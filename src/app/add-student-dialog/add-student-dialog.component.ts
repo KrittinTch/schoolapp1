@@ -20,7 +20,7 @@ export class AddStudentDialogComponent implements OnInit {
 
   selectionChange(ev) {
     if (ev.selectedIndex === 2) {
-      console.log("hilml");
+      
       const intervalId = setInterval(() => {
         this.isshow = false;
         this.studentsdata = {
@@ -33,7 +33,7 @@ export class AddStudentDialogComponent implements OnInit {
           birthplace: "โรงพยาบาลบีเเคร์",
           no: "1",
           doctor: "เเพทย์แผนปัจจุบัน",
-          weight: "1360 กรัม",
+          weight: "3160 กรัม",
           fatherid: "3300800165723",
           motherid: "3140200336928"
           

@@ -20,7 +20,7 @@
 
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>อัพโหลด</ng-template>
+      <ng-template matStepLabel>อัปโหลด</ng-template>
       <div class="head">
         <H5>อัพโหลดไฟล์สูติบัตร</H5>
       </div>
@@ -110,9 +110,9 @@
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>อัพโหลดไฟล์ที่เหลือ</ng-template>
+      <ng-template matStepLabel>อัปโหลดไฟล์ที่เหลือ</ng-template>
       <div class="head">
-        <H5>อัพโหลดไฟล์ข้อมูลอื่นๆที่เหลือ</H5>
+        <H5>อัปโหลดไฟล์ข้อมูลอื่นๆที่เหลือ</H5>
       </div>
 
       <img (click)="fileInput2.click()" class="mt-2 img" src="https://image.flaticon.com/icons/svg/138/138590.svg"
@@ -126,7 +126,7 @@
       <div class="filename" *ngFor="let item of filesMulti">
         {{item.name}}
       </div>
-      <p class="mt-2">**หมายเหตุสามารถเลือกอัพโหลดได้มากกว่า 1 ไฟล์**</p>
+      <p class="mt-2">**หมายเหตุสามารถเลือกอัปโหลดได้มากกว่า 1 ไฟล์**</p>
 
     </form>
     <div>
@@ -195,7 +195,7 @@
       </div>
 
       <div>
-        รายการไฟล์ที่อัพโหลด :
+        รายการไฟล์ที่อัปโหลด :
       </div>
       <div class="filename" *ngFor="let item of filesMulti">
         {{item.name}}

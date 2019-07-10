@@ -32,13 +32,13 @@
         <mat-form-field>
           <mat-label>สถานะการสมัคร</mat-label>
           <mat-select [(value)]="selected">
-            <mat-option value="option1">ผ่าน</mat-option>
-            <mat-option value="option2">ไม่ผ่าน</mat-option>
+            <mat-option value="pass">ผ่าน</mat-option>
+            <mat-option value="denied">ไม่ผ่าน</mat-option>
           </mat-select>
         </mat-form-field>
       
       
-      <button  mat-raised-button color="primary" >แก้ไข</button>
+      <button  mat-raised-button color="warn" >แก้ไข</button>
       <button  mat-raised-button color="primary" >ดาวน์โหลด</button>
      
     </div>
