@@ -9,7 +9,7 @@
       <ng-template matStepLabel>เเจ้งเตือน</ng-template>
       <h5>
         โปรดตรวจสอบให้แน่ใจว่าคุณได้ทำการสเเกนเอกสารไว้เรียบร้อยเเล้ว <br> หากใช่ ให้กดปุ่ม "ถัดไป"
-        เพื่อไปหน้าการอัพโหลดข้อมูล
+        เพื่อไปหน้าการอัปโหลดข้อมูล
       </h5>
       <div>
         <button mat-flat-button color="warn" (click)="close()">ยกเลิก</button>
@@ -22,12 +22,12 @@
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>อัปโหลด</ng-template>
       <div class="head">
-        <H5>อัพโหลดไฟล์สูติบัตร</H5>
+        <H5>อัปโหลดไฟล์สูติบัตร</H5>
       </div>
 
       <img class="img" (click)="fileInput.click()" src="https://image.flaticon.com/icons/svg/138/138590.svg">
       <div class="container">
-        <button class="uploadbtn" mat-flat-button color="primary" (click)="fileInput.click()">อัพโหลดไฟล์</button>
+        <button class="uploadbtn" mat-flat-button color="primary" (click)="fileInput.click()">อัปโหลดไฟล์</button>
         <input hidden type="file" #fileInput (change)="detectFiles($event)">
         <div class="mt-3">รายการไฟล์ที่เลือก : </div>
         <div class="filename"> {{fileSelected}} </div>
@@ -118,7 +118,7 @@
       <img (click)="fileInput2.click()" class="mt-2 img" src="https://image.flaticon.com/icons/svg/138/138590.svg"
         multiple>
       <div class="container">
-        <button class="uploadbtn1" mat-flat-button color="primary" (click)="fileInput2.click()">อัพโหลดไฟล์</button>
+        <button class="uploadbtn1" mat-flat-button color="primary" (click)="fileInput2.click()">อัปโหลดไฟล์</button>
         <input hidden type="file" #fileInput2 multiple (change)="detectFiles2($event)">
       </div>
       <p class="mt-3">รายการไฟล์ที่เลือก : </p>
