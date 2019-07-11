@@ -3,7 +3,7 @@
   }
 
 .adduser {
-    width: 12%;
+    width: 10%;
     height: 80%;
     margin-top: 2%
 }
@@ -29,6 +29,27 @@
 
 .head{
    
-    margin-top: 3%;
-    margin-bottom: -2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .btndw{
+      margin-left: 1%;
+  }

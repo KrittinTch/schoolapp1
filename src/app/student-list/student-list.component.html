@@ -9,11 +9,13 @@
 
 
 
-<div class="row" *ngIf="students.length > 0">
+<!-- <div class="row" *ngIf="students.length > 0">
   <div class="col-12">
 
 
     <div><img src="https://image.flaticon.com/icons/svg/1006/1006013.svg" class="adduser" (click)="openDialog()"></div>
+    
+    
     <div><h3 class="head">รายชื่อผู้สมัครเข้าเรียน</h3></div>
     <div class="row mt-5  border-buttom">
       <div class="col-3">ชื่อ - สกุล</div>
@@ -43,5 +45,45 @@
      
     </div>
 
+  </div>
+</div> -->
+
+<div class="row" *ngIf="students.length > 0">
+  <div class="col-12">
+    <div><img src="https://image.flaticon.com/icons/svg/1006/1006013.svg" class="adduser" (click)="openDialog()"></div>
+    <div><h4 class="head">รายชื่อผู้สมัครเข้าเรียน</h4></div>
+    <table *ngIf="students.length > 0">
+      <thead style="background-color: #d6d6d6;">
+        <tr style="font-size: 16px ; text-align: center">
+          <th style="text-align: center">ชื่อ-นามสกุล</th>
+          <th style="text-align: center">เลขประจำตัวประชาชน</th>
+          <th style="text-align: center">เบอร์โทรติดต่อ</th>
+          <th style="text-align: center">สถานะการสมัครเรียน</th>
+          <th style="text-align: center">การจัดการ</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let students of students">
+        <tr>
+          <td style="font-weight: 100; text-align: center">{{students.fullname}}</td>
+          <td style="font-weight: 100; text-align: center">{{students.id}}</td>
+          <td style="font-weight: 100; text-align: center">{{students.telno}}</td>
+          <td style="font-weight: 100; text-align: center">
+            <mat-select>
+              <mat-option *ngFor="let status of status" [value]="status.value">
+                {{status.viewValue}}
+              </mat-option>
+            </mat-select>
+          </td>
+          <td style="font-weight: 100; text-align: center">
+            <button mat-raised-button color="warn">
+              <mat-icon>edit</mat-icon>&nbsp;แก้ไข
+            </button>
+            <button mat-raised-button color="primary" class="btndw">
+              <mat-icon>cloud_download</mat-icon>&nbsp;ดาวน์โหลด
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

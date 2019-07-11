@@ -44,6 +44,15 @@ export class StudentListComponent implements OnInit {
     });
   }
 
+  status: status[] = [
+    {value: "pass", viewValue: "ผ่าน"},
+    {value: "notpass", viewValue: "ไม่ผ่าน"}
+  ];
+
+}
 
 
+export interface status {
+  value: string;
+  viewValue: string;
 }
